@@ -8,7 +8,7 @@ const SignupPage = () => {
   const [role, setRole] = useState("");
   const navigate = useNavigate();
 
-  const API_URL = "http://localhost:5000";
+  const API_URL = "https://uss.onrender.com/";
 
   const signupUser = (name, email, password, role) => {
     const userData = { name, email, password, role };
