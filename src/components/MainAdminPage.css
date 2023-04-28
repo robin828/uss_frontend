@@ -1,0 +1,25 @@
+.application-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    color: black;
+  }
+  
+  .section {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .accepted {
+    background-color: #508850;
+  }
+  
+  .waiting {
+    background-color: #8f8f48;
+  }
+  
+  .rejected {
+    background-color: #934a4a;
+  }
+  
