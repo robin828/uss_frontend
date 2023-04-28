@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 function CompanyDashboard() {
   const [companyName, setCompanyName] = useState('');
   const [companyPurpose, setCompanyPurpose] = useState('');
-  const API_URL = "https://uss.onrender.com/";
+  const API_URL = "https://uss.onrender.com";
 
   const handleSubmit = (event) => {
     event.preventDefault();

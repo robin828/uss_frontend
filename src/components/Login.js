@@ -7,7 +7,7 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
-  const API_URL = "https://uss.onrender.com/";
+  const API_URL = "https://uss.onrender.com";
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
