@@ -7,8 +7,8 @@ function CompanyDashboard() {
   const [companyName, setCompanyName] = useState('');
   const [companyPurpose, setCompanyPurpose] = useState('');
   const [postion, setPosition] = useState('');
-  // const API_URL = "https://uss.onrender.com";
-  const API_URL = "http://localhost:5000";
+  const API_URL = "https://uss.onrender.com";
+  // const API_URL = "http://localhost:5000";
 
   const handleSubmit = (event) => {
     event.preventDefault();

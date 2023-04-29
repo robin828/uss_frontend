@@ -8,8 +8,8 @@ function MainAdminPage() {
     { id: 3, name: 'Company C', status: 'rejected' },
   ]);
 
-   // const API_URL = "https://uss.onrender.com";
-   const API_URL = "http://localhost:5000";
+   const API_URL = "https://uss.onrender.com";
+  //  const API_URL = "http://localhost:5000";
   const [collections, setCollections] = useState([]);
 
   useEffect(() => {

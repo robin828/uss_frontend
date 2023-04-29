@@ -15,8 +15,8 @@ const SignupPage = () => {
   };
   console.log(isAdmin);
 
-  // const API_URL = "https://uss.onrender.com";
-  const API_URL = "http://localhost:5000";
+  const API_URL = "https://uss.onrender.com";
+  // const API_URL = "http://localhost:5000";
   const signupUser = (name, email, password, role, isAdmin) => {
     console.log(name, email, password, role, isAdmin)
     const userData = { name, email, password, role, isAdmin };
