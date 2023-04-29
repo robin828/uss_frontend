@@ -7,13 +7,23 @@ const SignupPage = () => {
   const [password, setPassword] = useState("");
   const [role, setRole] = useState("");
   const navigate = useNavigate();
+  const [isAdmin, setIsAdmin] = useState(false);
 
-  const API_URL = "https://uss.onrender.com";
+  const handleToggle = () => {
+    console.log("88")
+    setIsAdmin(!isAdmin);
+  };
+  console.log(isAdmin);
 
-  const signupUser = (name, email, password, role) => {
-    const userData = { name, email, password, role };
+  // const API_URL = "https://uss.onrender.com";
+  const API_URL = "http://localhost:5000";
+  const signupUser = (name, email, password, role, isAdmin) => {
+    console.log(name, email, password, role, isAdmin)
+    const userData = { name, email, password, role, isAdmin };
     return axios.post(`${API_URL}/signup`, userData);
   };
+
+  
 
   const handleNameChange = (event) => {
     setName(event.target.value);
@@ -34,7 +44,7 @@ const SignupPage = () => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await signupUser(name, email, password, role);
+      const response = await signupUser(name, email, password, role, isAdmin);
       if (response.status === 200) {
         navigate("/");
       } else {
@@ -73,6 +83,15 @@ const SignupPage = () => {
         <label htmlFor="role">Role:</label>
         <input type="text" id="role" value={role} onChange={handleRoleChange} />
       </div>
+      <div>
+      <label htmlFor="admin-toggle">Admin:</label>
+      <input
+        id="admin-toggle"
+        type="checkbox"
+        checked={isAdmin}
+        onChange={handleToggle}
+      />
+    </div>
       <button type="submit">Sign up</button>
     </form>
   );
